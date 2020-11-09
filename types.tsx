@@ -1,21 +1,27 @@
-/**
- * This file was generated when running `expo init frontend`
- */
-
 export type RootStackParamList = {
   Root: undefined;
   NotFound: undefined;
 };
 
 export type BottomTabParamList = {
-  TabOne: undefined;
-  TabTwo: undefined;
+  Filter: undefined;
+  Home: undefined;
+  Book: undefined;
+  Profile: undefined;
 };
 
-export type TabOneParamList = {
-  TabOneScreen: undefined;
+export type FilterParamList = {
+  FilterScreen: undefined;
 };
 
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+export type HomeParamList = {
+  HomeScreen: undefined;
+};
+
+export type BookParamList = {
+  BookScreen: undefined;
+};
+
+export type ProfileParamList = {
+  ProfileScreen: undefined;
 };
