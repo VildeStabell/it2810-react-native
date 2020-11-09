@@ -1,3 +1,7 @@
+/**
+ * The navbar at the bottom of the screen.
+ */
+
 import { MaterialIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -12,10 +16,10 @@ import ProfileScreen from "../screens/ProfileScreen";
 import {
   BookParamList,
   BottomTabParamList,
-  FilterParamList, HomeParamList,
+  FilterParamList,
+  HomeParamList,
   ProfileParamList,
 } from "../types";
-
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -40,18 +44,14 @@ export default function BottomTabNavigator() {
         name="Home"
         component={HomeNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="home" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         }}
       />
       <BottomTab.Screen
         name="Book"
         component={BookNavigator}
         options={{
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="book" color={color} />
-          ),
+          tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} />,
         }}
       />
       <BottomTab.Screen
