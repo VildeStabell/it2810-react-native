@@ -28,7 +28,7 @@ export default function SearchField() {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder="Search for your favorite book"
+        placeholder="Search for books or authors"
         onChangeText={(text) => changeSearchValue(text)}
         onSubmitEditing={updateSearch}
       />
