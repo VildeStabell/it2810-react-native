@@ -44,11 +44,11 @@ export default function Pagination() {
   );
 }
 
-export function Icon(props: { name: string }) {
+export function Icon(props: { name: string, size?: number }) {
   const theme = useColorScheme() === "dark" ? scheme.dark : scheme.light;
   return (
     <MaterialIcons
-      size={30}
+      size={props.size ? props.size : 30}
       style={{ marginBottom: -3 }}
       color={theme.tabIconDefault}
       {...props}
