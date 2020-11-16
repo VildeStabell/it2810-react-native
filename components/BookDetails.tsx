@@ -33,8 +33,6 @@ export default function BookDetails() {
     cover = data?.bookById?.image;
     genres = data?.bookById?.genres;
   }
-  console.log("Cover: ", cover);
-  console.log("Title: ", title);
 
   if (bookId !== "") {
     return (
