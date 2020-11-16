@@ -44,7 +44,7 @@ export default function Pagination() {
   );
 }
 
-function Icon(props: { name: string }) {
+export function Icon(props: { name: string }) {
   const theme = useColorScheme() === "dark" ? scheme.dark : scheme.light;
   return (
     <MaterialIcons
