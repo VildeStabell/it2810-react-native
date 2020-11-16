@@ -6,14 +6,14 @@ import BookContainer from "../containers/BookContainer";
 import Sort from "../containers/Sort";
 import SearchField from "../components/SearchField";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }: any) {
   return (
     <View style={styles.container}>
       <View style={styles.searchAndSort}>
-        <SearchField/>
-        <Sort/>
+        <SearchField />
+        <Sort />
       </View>
-      <BookContainer />
+      <BookContainer navigation={navigation} />
     </View>
   );
 }
