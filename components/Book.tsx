@@ -2,13 +2,14 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { changeDetailedBook } from "../redux/actions";
 import { TouchableOpacity, Image, StyleSheet } from "react-native";
-import { Text, View } from "../components/Themed";
+import { Text, View } from "./Themed";
 
 interface BookProps {
   id: string;
   title: string;
   author: string;
   cover: string;
+  navigation: any;
 }
 
 /**
@@ -21,7 +22,7 @@ export default function Book(props: BookProps) {
 
   const handleBookClick = (id: string) => {
     dispatch(changeDetailedBook(id));
-    //TODO: change page
+    props.navigation.navigate("Book");
   };
 
   return (

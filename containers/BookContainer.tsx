@@ -15,7 +15,7 @@ import Pagination from "../components/Pagination";
  * @props booksData is the books to render.
  */
 
-export default function BookContainer() {
+export default function BookContainer({navigation}: any) {
   const bookPage: any = useSelector((state: any) => state.bookPage.bookPage);
   const search: string = useSelector((state: any) => state.search.searchString);
   const filters: string[] = useSelector((state: any) => state.filter.filters);
@@ -39,6 +39,7 @@ export default function BookContainer() {
         title={item.title}
         author={item.author !== "" ? item.author : "Unknown"}
         cover={item.image}
+        navigation={navigation}
       />
     );
   };
