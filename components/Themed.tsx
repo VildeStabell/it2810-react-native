@@ -54,7 +54,7 @@ export function View(props: ViewProps) {
 
 export function Button(props: ButtonProps) {
   const { lightColor, darkColor, ...otherProps } = props;
-  const color = useThemeColor({ light: lightColor, dark: darkColor }, "tint");
+  const color = useThemeColor({ light: lightColor, dark: darkColor }, "button");
 
   return <DefaultButton color={color} {...otherProps} />;
 }
