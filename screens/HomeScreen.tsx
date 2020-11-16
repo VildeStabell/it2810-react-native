@@ -1,12 +1,18 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
 
-import { View, Text } from "../components/Themed";
+import { View } from "../components/Themed";
 import BookContainer from "../containers/BookContainer";
+import Sort from "../containers/Sort";
+import SearchField from "../components/SearchField";
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
+      <View style={styles.searchAndSort}>
+        <SearchField/>
+        <Sort/>
+      </View>
       <BookContainer />
     </View>
   );
@@ -17,5 +23,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+  },
+  searchAndSort: {
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirection: "column",
+    alignItems: "center",
   },
 });
