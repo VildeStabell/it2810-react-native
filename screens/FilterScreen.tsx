@@ -1,19 +1,13 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
-
-import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
+import Filters from "../components/Filters";
 
 export default function FilterScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Filter</Text>
-      <View
-        style={styles.separator}
-        lightColor="#eee"
-        darkColor="rgba(255,255,255,0.1)"
-      />
-      <EditScreenInfo path="/screens/FilterScreen.tsx" />
+      <Text style={styles.title}>Genres to show</Text>
+      <Filters />
     </View>
   );
 }
@@ -27,6 +21,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: "bold",
+    padding: 5,
   },
   separator: {
     marginVertical: 30,
