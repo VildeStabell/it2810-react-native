@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { changeLoginStatus } from "../redux/actions";
 import { AUTH_URL } from "../constants/Urls";
-import { Button, Text, View } from "./Themed";
+import { Icon, Button, Text, View } from "./Themed";
 import { Input } from "react-native-elements";
-import { Icon } from "./Pagination";
 import { StyleSheet } from "react-native";
 
 interface UserFormProps {

@@ -1,3 +1,7 @@
+/**
+ * A file containing the urls needed to connect to the backend server
+ */
+
 export const BASE_URL = "http://it2810-20.idi.ntnu.no:3000/";
 export const BOOK_URL = BASE_URL + "book/";
 export const USER_URL = BASE_URL + "user/";

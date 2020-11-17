@@ -8,9 +8,7 @@ import { Image, StyleSheet } from "react-native";
 
 /**
  * BookDetail is a component that will show the details of a chosen book.
- * @var phonePage uses redux store to decide if the component should be shown.
  * @var bookId is the id of the book currently being displayed.
- * @var token is the current users jwt token.
  * @var data is a book retrieved from the database.
  */
 

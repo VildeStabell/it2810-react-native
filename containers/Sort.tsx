@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateSortBy, changeBookPage } from "../redux/actions";
-import { Icon } from "../components/Pagination";
-import { Text, View } from "../components/Themed";
+import { Icon, Text, View } from "../components/Themed";
 import { StyleSheet, TouchableOpacity } from "react-native";
 
 /**
- * SearchFiledAndSort is a component that contains the searchfield and the
- * button and dropdown for sorting elements.
- * @var phonePage is used to decide if the search-field and sort-button
- * should be shown.
- * @var bookPage is used to start at page 0 again when we search for something new.
+ * Sort is a component that contains a dropdown with buttons to chose how the list
+ * of books should be sorted.
+ * @var bookPage is used to start at page 0 again when another sort option is selected.
+ * @var sortBy is a string determining how the list of books should be sorted
+ * @var displayDropdown is a boolean that determines whether or not the dropdown
+ * should be displayed
  */
 
 export default function Sort() {

@@ -16,6 +16,8 @@ interface BookProps {
  * Book is a representation of a book, with its title,
  * author and cover image.
  * @param props contains the id, title, author and url for a picture of the cover of the book
+ * It also has a reference to the navigator used by the app, to make it possible to
+ * send the user to the BookScreen when a book is selected.
  */
 export default function Book(props: BookProps) {
   const dispatch = useDispatch();
