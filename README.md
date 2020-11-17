@@ -4,6 +4,8 @@ This project was developed for an assignment in it2810. The objective of the ass
 convert the client side of the application used in the [previous project](https://github.com/VildeStabell/it2810-search) 
 to a react native application. Expo was used to accomplish this.
 
+This project was tranferred from GitLab, which is why the commits and brances refer to issues not present here.
+
 ## General
 
 ### To run the client, follow these steps:
