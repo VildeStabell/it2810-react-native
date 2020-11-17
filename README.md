@@ -1,5 +1,9 @@
 # Project 4, Alt. A - React Native
 
+This project was developed for an assignment in it2810. The objective of the assignment was to
+convert the client side of the application used in the [previous project](https://github.com/VildeStabell/it2810-search) 
+to a react native application. Expo was used to accomplish this.
+
 ## General
 
 ### To run the client, follow these steps:
