@@ -11,8 +11,10 @@ import Pagination from "../components/Pagination";
 /**
  * BookContainer is a component that displays the books specified in bookData, and lets you move between pages.
  * @var bookPage is used to know which page of books the user is currently seeing.
- * @var phonePage is used to decide if the book-container should be shown.
- * @props booksData is the books to render.
+ * @var search is the search term to specify which books to display
+ * @var filters is the selected filters to filter the collection by
+ * @var sortBy is a string determining how the list of books should be sorted
+ * @var data is the results from the query, containing a list of books fitting the parameters
  */
 
 export default function BookContainer({navigation}: any) {

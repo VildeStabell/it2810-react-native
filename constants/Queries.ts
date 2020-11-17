@@ -1,4 +1,15 @@
+/**
+ * A file containing the GraphQL queries used to interact with the backend api.
+ */
+
 import { gql } from "@apollo/client";
+
+/**
+ * Returns a set of books based on the search term, selected filters and sorting.
+ * The resulting set of books is dynamically loaded based on the page number and
+ * requested number of books (size).
+ * The search term searches for partial matches in both title and author
+ */
 
 export const GET_BOOKS_BY_SEARCH = gql`
   query BooksBySearch(
@@ -24,6 +35,10 @@ export const GET_BOOKS_BY_SEARCH = gql`
   }
 `;
 
+/**
+ * Returns the book corresponding to the specified ID
+ */
+
 export const GET_BOOK_BY_ID = gql`
   query BookById($id: ID!) {
     bookById(id: $id) {
@@ -36,46 +51,14 @@ export const GET_BOOK_BY_ID = gql`
   }
 `;
 
-export const GET_BOOK_LIST_BY_IDS = gql`
-  query BooksById($page: Int, $size: Int, $ids: [ID!]) {
-    booksByIds(page: $page, size: $size, ids: $ids) {
-      id
-      title
-      author
-      genres
-      image
-    }
-  }
-`;
+/**
+ * Returns the username of a user corresponding to the given jwt token
+ */
 
 export const GET_USER_INFO = gql`
   query UserInfo($token: String) {
     userInfo(token: $token) {
       username
-      read
-      wanted
-      fav
-    }
-  }
-`;
-
-export const UPDATE_USERS_BOOK_LISTS = gql`
-  mutation UpdateLists(
-    $readList: [String]
-    $wantedList: [String]
-    $favList: [String]
-    $token: String
-  ) {
-    updateLists(
-      readList: $readList
-      wantedList: $wantedList
-      favList: $favList
-      token: $token
-    ) {
-      id
-      read
-      wanted
-      fav
     }
   }
 `;

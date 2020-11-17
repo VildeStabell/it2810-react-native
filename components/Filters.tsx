@@ -6,9 +6,12 @@ import { addFilter, changeBookPage, removeFilter } from "../redux/actions";
 import { StyleSheet } from "react-native";
 
 /**
- * FilterMenu is is a component that shows the different Checkboxes you can
- * choose between.
- * @var phonePage is used to decide if the filter-component should be shown.
+ * FilterMenu is is a component that shows the different Checkboxes a user can select
+ * to filter what books are shown.
+ * @var filters is an array of strings, containing the currently selected filters.
+ * @var bookPage is the number representing which page of books is being shown on the
+ * main page. This is changed to 0 as the filters are updated, to avoid problems with the
+ * page number being higher than possible pages.
  */
 
 export default function FilterMenu() {
