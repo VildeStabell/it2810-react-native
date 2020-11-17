@@ -4,9 +4,8 @@ import { changeLoginStatus } from "../redux/actions";
 import { useQuery } from "@apollo/client";
 import { GET_USER_INFO } from "../constants/Queries";
 import { USER_URL } from "../constants/Urls";
-import { Text, View } from "./Themed";
+import { Icon, Text, View } from "./Themed";
 import { StyleSheet, TouchableOpacity } from "react-native";
-import { Icon } from "./Pagination";
 
 /**
  * Profile is a component for the applications profile-page. It shows the users username,

@@ -3,6 +3,11 @@ import { StyleSheet } from "react-native";
 import { Text, View } from "../components/Themed";
 import Filters from "../components/Filters";
 
+/**
+ * The screen allowing the user to select what filters to filter
+ * the books on the home page by.
+ */
+
 export default function FilterScreen() {
   return (
     <View style={styles.container}>
@@ -22,10 +27,5 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     padding: 5,
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: "80%",
   },
 });

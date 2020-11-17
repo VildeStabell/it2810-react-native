@@ -1,5 +1,6 @@
 /**
- * The navbar at the bottom of the screen.
+ * The navbar at the bottom of the screen. Changes which screen is shown, based on
+ * which icon has been pressed.
  */
 
 import { MaterialIcons } from "@expo/vector-icons";

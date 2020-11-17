@@ -1,11 +1,15 @@
 import { StyleSheet, TouchableOpacity } from "react-native";
-import { Text, View } from "./Themed";
+import { Icon, Text, View } from "./Themed";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeBookPage } from "../redux/actions";
-import useColorScheme from "../hooks/useColorScheme";
-import scheme from "../constants/Colors";
-import { MaterialIcons } from "@expo/vector-icons";
+
+/**
+ * Pagination is a component that lets a user page though the set of books shown,
+ * so that they can be dynamically loaded, instead of retrieving the entire set at once.
+ * @var bookPage is the number representing which page of books is being shown on the
+ * main page.
+ */
 
 export default function Pagination() {
   const dispatch = useDispatch();
@@ -41,18 +45,6 @@ export default function Pagination() {
         <Icon name="arrow-forward" />
       </TouchableOpacity>
     </View>
-  );
-}
-
-export function Icon(props: { name: string, size?: number }) {
-  const theme = useColorScheme() === "dark" ? scheme.dark : scheme.light;
-  return (
-    <MaterialIcons
-      size={props.size ? props.size : 30}
-      style={{ marginBottom: -3 }}
-      color={theme.tabIconDefault}
-      {...props}
-    />
   );
 }
 

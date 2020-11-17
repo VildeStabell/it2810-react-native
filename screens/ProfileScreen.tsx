@@ -1,11 +1,15 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
-
 import { Button, Text, View } from "../components/Themed";
 import Profile from "../components/Profile";
 import UserForm from "../components/UserForm";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+
+/**
+ * The screen allowing the user to login and register a new user.
+ * If the user is logged in, this screen shows the user's profile page.
+ */
 
 export default function ProfileScreen() {
   const isLoggedIn: boolean = useSelector(

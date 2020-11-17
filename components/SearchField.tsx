@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { changeSearch, changeBookPage } from "../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
-import { Icon } from "./Pagination";
-import { View } from "./Themed";
+import { Icon, View } from "./Themed";
 import { StyleSheet, TextInput, TouchableOpacity } from "react-native";
 
 /**
@@ -28,6 +27,7 @@ export default function SearchField() {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
+        accessibilityLabel="Write what should be searched based on title and/or author"
         placeholder="Search for books or authors"
         onChangeText={(text) => changeSearchValue(text)}
         onSubmitEditing={updateSearch}
